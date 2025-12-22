@@ -3,12 +3,6 @@ from supabase import create_client, Client
 
 # Konfiguracja połączenia z Supabase
 # Najlepiej przechowywać te dane w .streamlit/secrets.toml
-URL = "TWOJ_SUPABASE_URL"
-KEY = "TWOJ_SUPABASE_ANON_KEY"
-
-@st.cache_resource
-def init_connection():
-    return create_client(URL, KEY)
 
 supabase = init_connection()
 
