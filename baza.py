@@ -90,7 +90,7 @@ with tab3:
         st.info("Brak danych w tabeli Produkty.")
 
     st.subheader("Tabela: Kategorie")
-    kat_view = supabase.table("Kategorie").select("*").execute()
+    kat_view = supabase.table("kategorie").select("*").execute()
     if kat_view.data:
         st.dataframe(kat_view.data, use_container_width=True)
     else:
