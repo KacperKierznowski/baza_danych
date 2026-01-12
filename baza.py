@@ -32,7 +32,7 @@ with tab2:
             if kat_nazwa:
                 data = {"nazwa": kat_nazwa, "opis": kat_opis}
                 try:
-                    supabase.table("Kategorie").insert(data).execute()
+                    supabase.table("kategorie").insert(data).execute()
                     st.success(f"Dodano kategorię: {kat_nazwa}")
                 except Exception as e:
                     st.error(f"Błąd zapisu: {e}")
