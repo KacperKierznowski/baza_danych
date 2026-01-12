@@ -44,7 +44,7 @@ with tab1:
     st.header("Nowy Produkt")
     
     # Pobranie aktualnych kategorii, aby powiązać produkt (klucz obcy kategorie_id)
-    categories_res = supabase.table("Kategorie").select("id, nazwa").execute()
+    categories_res = supabase.table("kategorie").select("id, nazwa").execute()
     categories_data = categories_res.data
     
     if not categories_data:
